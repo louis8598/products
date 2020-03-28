@@ -2,7 +2,7 @@
 products = []
 while True:
     date = input('請輸入今天日期：')
-    if name == 'q':
+    if date == 'q':
         break
     name = input('請輸入商品名稱：')
     price = input('請輸入商品價格：')
