@@ -8,6 +8,7 @@ with open('記帳本.csv', 'r') as f: #不同作業系統會有編碼問題，�
         #記得要先用strip將\n或空格去掉，不然csv會出現在\n在裡面，
         #然後再用split切割檔案，並利用逗號做為區隔，這個會有一個順序(由左而右)
         #先在新增功能，與下面一樣，不要重複寫入，而是將data,name,price三個已知名稱分別寫入，也是一個簡寫法
+        products.append([date, name, price]) #讀取之後，要把他加入product裡面，所以用跟下面一樣的寫法就可以
 print(s)
 
 while True:
