@@ -8,3 +8,6 @@ while True:
     price = input('請輸入商品價格：')
     products.append([date, name, price]) #直接在大清單中創作小清單，讓程式碼更少
 print(products)
+
+for p in products: #列出細項
+    print(p)
