@@ -6,7 +6,5 @@ while True:
         break
     name = input('請輸入商品名稱：')
     price = input('請輸入商品價格：')
-    acc = []
-    acc = [date, name, price] #清單中裝著date name price三樣東西，這樣就不用寫acc.append(),這是簡潔寫法
-    products.append(acc)
+    products.append([date, name, price]) #直接在大清單中創作小清單，讓程式碼更少
 print(products)
