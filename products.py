@@ -4,7 +4,10 @@
 products = [] #將product抓上來當清單
 with open('記帳本.csv', 'r') as f: #不同作業系統會有編碼問題，建議還是要加入編碼utf-8，可是如果是中文作業系統加入這個可能會出現錯誤代碼
     for line in f:
-        s = line.strip().split(',') #記得要先用strip將\n或空格去掉，不然csv會出現在\n在裡面，然後再用split切割檔案，並利用逗號做為區隔，這個會有一個順序(由左而右)
+        date, name, price  = line.strip().split(',')
+        #記得要先用strip將\n或空格去掉，不然csv會出現在\n在裡面，
+        #然後再用split切割檔案，並利用逗號做為區隔，這個會有一個順序(由左而右)
+        #先在新增功能，與下面一樣，不要重複寫入，而是將data,name,price三個已知名稱分別寫入，也是一個簡寫法
 print(s)
 
 while True:
