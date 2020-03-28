@@ -12,6 +12,6 @@ print(products)
 for p in products: #列出細項
     print('這項商品是在', p[0],'買的，商品名稱是', p[1], '商品價格為', p[2],'元。') #利用p[0]列出清單中的第一項目達成目的，後面以此列推。
 
-with open('記帳本.txt', 'w') as f:
+with open('記帳本.csv', 'w') as f:
     for p in products:
-        f.write(p[0] + ':' + p[1] + ',' + p[2] + '\n')
+        f.write(p[0] + ',' + p[1] + ',' + p[2] + '\n') #使用CSV檔案，必須用逗號分隔，才會分開存取
