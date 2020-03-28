@@ -10,4 +10,4 @@ while True:
 print(products)
 
 for p in products: #列出細項
-    print(p)
+    print('這項商品是在', p[0],'買的，商品名稱是', p[1], '商品價格為', p[2],'元。') #利用p[0]列出清單中的第一項目達成目的，後面以此列推。
