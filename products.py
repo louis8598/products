@@ -13,7 +13,7 @@ print(products)
 for p in products: #列出細項
     print('這項商品是在', p[0],'買的，商品名稱是', p[1], '商品價格為', p[2],'元。') #利用p[0]列出清單中的第一項目達成目的，後面以此列推。
 
-with open('記帳本.csv', 'w') as f:
+with open('記帳本.csv', 'w', encoding='utf-8') as f: #有時候會出現亂碼，所以要告訴他，我要使用什麼編碼，大部分建議使用utf-8，它是世界共通的編碼
     f.write('日期,商品名稱,價格\n') #要寫入每一行的index索引，只要在迴圈前將標題名稱寫入即可，這樣他就不會一直重複，也能在最上面
     for p in products:
         f.write(p[0] + ',' + p[1] + ',' + str(p[2]) + '\n') #使用CSV檔案，必須用逗號分隔，才會分開存取
