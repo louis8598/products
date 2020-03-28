@@ -1,5 +1,12 @@
 #記帳軟體
-products = []
+#讀取檔案 #就是先讀取檔案後，把讀取的內容先裝進清單
+#後續輸入新的內容，才不會全部洗掉，這就是讀取的作用
+products = [] #將product抓上來當清單
+with open('記帳本.csv', 'r') as f: #不同作業系統會有編碼問題，建議還是要加入編碼utf-8，可是如果是中文作業系統加入這個可能會出現錯誤代碼
+    for line in f:
+        s = line.strip().split(',') #記得要先用strip將\n或空格去掉，不然csv會出現在\n在裡面，然後再用split切割檔案，並利用逗號做為區隔，這個會有一個順序(由左而右)
+print(s)
+
 while True:
     date = input('請輸入日期：')
     if date == 'q':
